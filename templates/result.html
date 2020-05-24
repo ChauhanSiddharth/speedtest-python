@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Speed Test</title>
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+<style>
+	body{
+		margin: 0;
+		padding: 0;
+		font-family: "montserrat", sans-serif;
+	}
+	.middle{
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		transform: translateY(-50%);
+	}
+	.counting-sec{
+		padding: 40px 0;
+		width: 100%;
+		background: linear-gradient(90deg, #3c6382,#82ccdd);
+	}
+	.inner-width{
+		max-width: 1200px;
+		margin: auto;
+		display: flex;
+	}
+	.col{
+		flex: 1;
+		text-align: center;
+		padding: 20px;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	.col i{
+		font-size: 40px;
+		color: #333;
+	}
+	.num{
+		font-size: 40px;
+		margin: 20px 0;
+	}
+
+</style>
+</head>
+<body>
+	<h1>Result</h1>
+
+	<div class="middle">
+		<div class="counting-sec">
+			<div class="inner-width">
+				<div class="col">
+					<i class="fas fa-tachometer-alt"></i>
+					<div class="num">{{download}}</div>Kb/s
+					Download
+				</div>
+				<div class="col">
+					<i class="fas fa-tachometer-alt"></i>
+					<div class="num">{{upload}}</div>Kb/s
+					Upload
+				</div>
+				<div class="col">
+					<i class="fas fa-tachometer-alt"></i>
+					<div class="num">{{ping}}</div>
+					Ping
+				</div>
+				<div class="col">
+					<i class="fas fa-tachometer-alt"></i>
+					<div class="num">1200</div>
+					{{client}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <p>Download Speed: {{download}} Kb/s</p>
+	<p>Upload Speed: {{upload}} Kb/s</p>
+	<p>Ping: {{ping}}</p>
+	<p>ISP: {{client}}</p> -->
+
+<script type="text/javascript">
+	$(".num").counterUp({delay:20,time:2000});
+</script>
+</body>
+</html>
