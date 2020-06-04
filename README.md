@@ -1,5 +1,5 @@
 # speedtest-python
-Flask web app to test your Internet Speed.
+Flask web app to test your Internet Speed using speedtest-cli.
 
 ### Download or Clone this repository
 
